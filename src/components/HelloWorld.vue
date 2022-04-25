@@ -27,16 +27,40 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+
+    <h3>{{name}}</h3>
+    <p>{{weather}}, {{temperature}} </p>
+    <p>{{updatedAt}}</p>
   </div>
+
+  
+
+  
 </template>
 
 <script>
+
+
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
-  }
+    msg: String,
+    },
+   data() {
+      return {
+      
+    name: 'Grenoble', // nom de la ville
+    weather: 'Presque il pleut fou', // descriptif météo 
+    temperature: 13, // température en °C
+    updatedAt: new Date().toLocaleString() // date de dernière mise à jour
+
 }
+}
+
+  
+}
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
